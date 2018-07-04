@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+
 android {
     compileSdkVersion var.compileSdkVersion
     buildToolsVersion var.buildToolsVersion
@@ -27,13 +28,13 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$var.supportLibraryVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     implementation "com.android.support:recyclerview-v7:$var.supportLibraryVersion"
     implementation "com.android.support:support-v4:$var.supportLibraryVersion"
     implementation "com.android.support:design:$var.supportLibraryVersion"
-    implementation 'com.android.support:support-v4:28.+'
+    implementation "com.android.support:recyclerview-v7:$var.supportLibraryVersion"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -51,4 +52,6 @@ dependencies {
 
     //
     implementation 'cn.bingoogolapple:bga-refreshlayout:1.1.8@aar'
+    implementation 'me.drakeet.multitype:multitype-kotlin:3.4.4'
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
 }

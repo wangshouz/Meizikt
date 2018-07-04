@@ -44,7 +44,7 @@ abstract class HttpObserver<T> : Observer<T> {
      * @param code
      * @param msg
      */
-    fun onError(code: Int, msg: String?) {
+    open fun onError(code: Int, msg: String?) {
 
     }
 

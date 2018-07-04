@@ -1,5 +1,6 @@
 package com.wangsz.meizi.ui.base
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,8 +13,11 @@ import com.trello.rxlifecycle2.components.support.RxFragment
  */
 open class BaseFragment : RxFragment() {
 
+    lateinit var mContext: Context
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mContext = activity as Context
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
