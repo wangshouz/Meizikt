@@ -29,4 +29,11 @@ class Result {
     var isUsed: Boolean = false
     var who: String? = null
     var images: List<String>? = null
+
+    /**
+     * 妹子小图
+     */
+    fun meiziSmallUrl(): String {
+        return url?.replace("large", "small") ?: ""
+    }
 }
