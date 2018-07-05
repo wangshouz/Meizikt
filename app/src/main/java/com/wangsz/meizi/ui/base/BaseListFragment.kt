@@ -21,7 +21,7 @@ abstract class BaseListFragment : BaseFragment(), BGARefreshLayout.BGARefreshLay
     lateinit var mMultiTypeAdapter: MultiTypeAdapter
     lateinit var mItems: Items
     var mIntPage = 1
-    var mBooleanMore = true
+    private var mBooleanMore = true
 
     abstract fun initAdapterRegister()
     abstract fun loadData()

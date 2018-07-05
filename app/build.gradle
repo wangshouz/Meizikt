@@ -1,9 +1,10 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'kotlin-kapt'
+
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
-
 
 android {
     compileSdkVersion var.compileSdkVersion
@@ -35,6 +36,7 @@ dependencies {
     implementation "com.android.support:support-v4:$var.supportLibraryVersion"
     implementation "com.android.support:design:$var.supportLibraryVersion"
     implementation "com.android.support:recyclerview-v7:$var.supportLibraryVersion"
+    implementation 'com.android.support:support-v4:28.+'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -53,5 +55,9 @@ dependencies {
     //
     implementation 'cn.bingoogolapple:bga-refreshlayout:1.1.8@aar'
     implementation 'me.drakeet.multitype:multitype-kotlin:3.4.4'
-    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    kapt 'com.github.bumptech.glide:compiler:4.7.1'
+    implementation 'com.jaeger.ninegridimageview:library:1.1.1'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.4'
+    implementation 'com.just.agentweb:agentweb:4.0.2' // (必选)
 }

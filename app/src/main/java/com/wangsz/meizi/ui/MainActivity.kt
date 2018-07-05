@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    var fragments: Array<Fragment?> = arrayOfNulls(6)
+    var fragments: ArrayList<Fragment?> = arrayListOf()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +28,12 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+        nav_view.setCheckedItem(R.id.nav_meizi)
+
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        hideFragments(fragmentTransaction)
+        showFragment(fragmentTransaction, nav_view.checkedItem!!.title.toString(), nav_view.checkedItem!!.itemId)
+        fragmentTransaction.commit()
 
     }
 
@@ -71,12 +77,12 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             transaction.show(fragment)
         } else {
 
-            when (type) {
-                R.id.nav_meizi -> fragment = MeiziFragment.newInstance()
-                R.id.nav_about -> fragment = AboutFragment.newInstance()
-                else -> fragment = ResultFragment.newInstance(type)
+            fragment = when (type) {
+            //                R.id.nav_meizi -> fragment = MeiziFragment.newInstance()
+                R.id.nav_about -> AboutFragment.newInstance()
+                else -> ResultFragment.newInstance(type)
             }
-
+            fragments.add(fragment)
             transaction.add(R.id.frameLayout, fragment, tag)
         }
     }

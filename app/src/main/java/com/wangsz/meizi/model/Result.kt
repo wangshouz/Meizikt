@@ -25,7 +25,7 @@ class Result {
     var publishedAt: String? = null
     var source: String? = null
     var type: String? = null
-    var url: String? = null
+    var url: String = ""
     var isUsed: Boolean = false
     var who: String? = null
     var images: List<String>? = null
@@ -34,6 +34,8 @@ class Result {
      * 妹子小图
      */
     fun meiziSmallUrl(): String {
-        return url?.replace("large", "small") ?: ""
+        val meizi = url
+        return meizi?.replace("large", "small") ?: ""
     }
+
 }

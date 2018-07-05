@@ -6,6 +6,7 @@
     <cn.bingoogolapple.refreshlayout.BGARefreshLayout
         android:id="@+id/bga_refresh"
         android:layout_width="match_parent"
+        android:background="@color/background"
         android:layout_height="match_parent">
 
         <android.support.v7.widget.RecyclerView
