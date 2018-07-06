@@ -5,15 +5,11 @@
 
 ### 截图
 
-![截图1](screens/image1.png)
+<img src="screens/image1.png" width="200px" /><img src="screens/image2.png" width="200px" />
 
-![截图2](screens/image2.png)
+<img src="screens/image3.png" width="200px" /><img src="screens/image4.png" width="200px" />
 
-![截图3](screens/image3.png)
-
-![截图4](screens/image4.png)
-
-![截图5](screens/image5.png)
+<img src="screens/image5.png" width="200px" />
 
 ----
 
