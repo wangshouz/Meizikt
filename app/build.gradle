@@ -25,6 +25,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -36,7 +37,6 @@ dependencies {
     implementation "com.android.support:support-v4:$var.supportLibraryVersion"
     implementation "com.android.support:design:$var.supportLibraryVersion"
     implementation "com.android.support:recyclerview-v7:$var.supportLibraryVersion"
-    implementation 'com.android.support:support-v4:28.+'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -60,4 +60,8 @@ dependencies {
     implementation 'com.jaeger.ninegridimageview:library:1.1.1'
     implementation 'com.github.chrisbanes:PhotoView:2.1.4'
     implementation 'com.just.agentweb:agentweb:4.0.2' // (必选)
+
+    //leakcanary内存泄漏检测
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
 }

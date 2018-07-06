@@ -15,6 +15,8 @@
         android:layout_height="wrap_content"
         android:drawablePadding="5dp"
         android:drawableStart="@drawable/ic_label"
+        android:textColor="@color/text_333"
+        android:textSize="15sp"
         tools:text="@string/app_name" />
 
     <com.jaeger.ninegridimageview.NineGridImageView

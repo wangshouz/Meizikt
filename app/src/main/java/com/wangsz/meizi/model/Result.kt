@@ -35,7 +35,7 @@ class Result {
      */
     fun meiziSmallUrl(): String {
         val meizi = url
-        return meizi?.replace("large", "small") ?: ""
+        return meizi.replace("large", "small")
     }
 
 }

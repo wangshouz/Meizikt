@@ -7,10 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.request.RequestOptions
 import com.wangsz.meizi.R
+import com.wangsz.meizi.imageloader.ImageLoader
 import com.wangsz.meizi.model.Result
 import com.wangsz.meizi.ui.PhotoViewActivity
 import com.wangsz.meizi.util.ScreenUtil
@@ -29,9 +27,7 @@ class MeiziViewBinder(var context: Context) : ItemViewBinder<Result, MeiziViewBi
         holder.ivMeizi.layoutParams.width = ScreenUtil.widthInt(0.5f) - ScreenUtil.dip2px(20)
         holder.ivMeizi.layoutParams.height = (holder.ivMeizi.layoutParams.width * 1.3).toInt()
 
-        Glide.with(context).load(item.meiziSmallUrl())
-                .apply(RequestOptions().fitCenter().diskCacheStrategy(DiskCacheStrategy.RESOURCE).dontAnimate())
-                .into(holder.ivMeizi)
+        ImageLoader.load(context, item.meiziSmallUrl(), holder.ivMeizi)
 
         holder.ivMeizi.setOnClickListener({
             val intent = Intent(context, PhotoViewActivity::class.java)

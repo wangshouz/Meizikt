@@ -3,11 +3,13 @@
     <string name="title_activity_main">首页</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Gank妹纸</string>
+    <string name="nav_header_subtitle">http://gank.io/</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="introduce">Meizikt，随时随地了解最新技(piao)术(liang)动(mei)态(zi)。除周末部分节假日外，每日更新一个美图，一个小视频，以及各类技术最新文章。</string>
+    <string name="my_blog">blog：<font color="#FF4081"><u>https://wangshouz.github.io/</u></font></string>
+    <string name="my_github">项目源码地址：<font color="#FF4081"><u>https://github.com/wangshouz/Meizikt</u></font></string>
+
 </resources>

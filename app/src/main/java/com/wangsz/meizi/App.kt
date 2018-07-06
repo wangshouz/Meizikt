@@ -1,6 +1,7 @@
 package com.wangsz.meizi
 
 import android.app.Application
+import com.squareup.leakcanary.LeakCanary
 
 /**
  * author: wangsz
@@ -15,6 +16,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
+        LeakCanary.install(this)
     }
 
 }
