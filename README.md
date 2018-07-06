@@ -5,11 +5,9 @@
 
 ### 截图
 
-<img src="screens/image1.png" width="200px" /><img src="screens/image2.png" width="200px" />
+<img src="screens/image1.png" width="200px" /><img src="screens/image2.png" width="200px" /><img src="screens/image3.png" width="200px" />
 
-<img src="screens/image3.png" width="200px" /><img src="screens/image4.png" width="200px" />
-
-<img src="screens/image5.png" width="200px" />
+<img src="screens/image4.png" width="200px" /><img src="screens/image5.png" width="200px" />
 
 ----
 
