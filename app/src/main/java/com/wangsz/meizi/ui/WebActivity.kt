@@ -2,8 +2,10 @@ package com.wangsz.meizi.ui
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.Menu
 import android.view.ViewGroup
 import android.webkit.WebChromeClient
 import android.webkit.WebView
@@ -16,6 +18,7 @@ class WebActivity : AppCompatActivity() {
 
     lateinit var agentWeb: AgentWeb
     lateinit var webChromeClient: WebChromeClient
+    lateinit var url: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,10 +27,18 @@ class WebActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
         toolbar.setNavigationOnClickListener { finish() }
-
-        val url = intent?.let {
-            intent.getStringExtra("url")
+        toolbar.setOnMenuItemClickListener { p0 ->
+            if (p0!!.itemId == R.id.menu_chrome) {
+                val uri = Uri.parse(url)
+                val intent = Intent(Intent.ACTION_VIEW, uri)
+                startActivity(intent)
+            }
+            false
         }
+
+        url = intent?.let {
+            intent.getStringExtra("url")
+        } ?: ""
 
         webChromeClient = WebChromeClient()
 
@@ -43,6 +54,11 @@ class WebActivity : AppCompatActivity() {
                 .createAgentWeb()
                 .ready().go(url)
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_web, menu)
+        return true
     }
 
     override fun onResume() {
