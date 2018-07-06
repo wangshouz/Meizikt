@@ -29,6 +29,7 @@ class WebActivity : AppCompatActivity() {
         toolbar.setNavigationOnClickListener { finish() }
         toolbar.setOnMenuItemClickListener { p0 ->
             if (p0!!.itemId == R.id.menu_chrome) {
+                // 用默认浏览器打开
                 val uri = Uri.parse(url)
                 val intent = Intent(Intent.ACTION_VIEW, uri)
                 startActivity(intent)

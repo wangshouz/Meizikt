@@ -18,8 +18,8 @@ class AboutFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tv_blog.setOnClickListener({ WebActivity.startWeb(mContext, "https://wangshouz.github.io/") })
-        tv_github.setOnClickListener({ WebActivity.startWeb(mContext, "https://github.com/wangshouz/Meizikt") })
+        tv_blog.setOnClickListener { WebActivity.startWeb(mContext, "https://wangshouz.github.io/") }
+        tv_github.setOnClickListener { WebActivity.startWeb(mContext, "https://github.com/wangshouz/Meizikt") }
     }
 
     companion object {

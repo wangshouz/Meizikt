@@ -60,6 +60,7 @@ dependencies {
     implementation 'com.jaeger.ninegridimageview:library:1.1.1'
     implementation 'com.github.chrisbanes:PhotoView:2.1.4'
     implementation 'com.just.agentweb:agentweb:4.0.2' // (必选)
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
 
     //leakcanary内存泄漏检测
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'

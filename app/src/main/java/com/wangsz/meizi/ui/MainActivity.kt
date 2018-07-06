@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    var fragments: ArrayList<Fragment?> = arrayListOf()
+    private var fragments: ArrayList<Fragment?> = arrayListOf()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
